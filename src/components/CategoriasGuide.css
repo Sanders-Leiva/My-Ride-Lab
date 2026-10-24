@@ -1,0 +1,623 @@
+/* Categorias Guide Page Styles */
+.guide-page {
+  background-color: #f6f4ee;
+  color: #111111;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  min-height: calc(100vh - 70px);
+}
+
+/* Breadcrumb */
+.guide-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.85rem;
+  color: #666666;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: #444444;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--color-red, #e5232e);
+}
+
+.breadcrumb-separator {
+  color: #999999;
+}
+
+.breadcrumb-current {
+  color: #111111;
+  font-weight: 600;
+}
+
+/* Page Header */
+.guide-header {
+  margin-bottom: 3.5rem;
+}
+
+.guide-header .section-badge {
+  display: inline-block;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-red, #e5232e);
+  margin-bottom: 0.5rem;
+}
+
+.guide-main-title {
+  margin: 0.35rem 0 0.65rem 0;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: clamp(2.4rem, 5vw, 3.85rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #0e0e0e;
+  line-height: 1.05;
+}
+
+.guide-subtitle {
+  margin: 0 0 1.75rem 0;
+  font-family: var(--font-main, sans-serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #4b5563;
+  max-width: 60ch;
+}
+
+/* Quick Jump Links */
+.guide-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e2da;
+}
+
+.quick-link-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.quick-link-btn {
+  background: none;
+  border: none;
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.quick-link-btn:hover {
+  color: var(--color-red, #e5232e);
+  background-color: rgba(229, 35, 46, 0.08);
+}
+
+.quick-link-dot {
+  color: #9ca3af;
+  font-weight: bold;
+}
+
+/* Guide Sections List */
+.guide-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+/* Guide Card */
+.guide-card {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  border-radius: 4px;
+  scroll-margin-top: 90px;
+  transition: transform 0.2s ease;
+}
+
+/* Layout alternating */
+.guide-card.layout-right {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.guide-card.layout-right .guide-image-box {
+  order: 2;
+}
+
+.guide-card.layout-right .guide-content-box {
+  order: 1;
+}
+
+/* Themes: Light vs Dark (Item 03) */
+.guide-card.theme-light {
+  background: transparent;
+}
+
+.guide-card.theme-dark {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 2.75rem 3rem;
+  border-radius: 6px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.guide-card.theme-dark .guide-section-title {
+  color: #ffffff;
+}
+
+.guide-card.theme-dark .guide-section-desc {
+  color: #d1d5db;
+}
+
+.guide-card.theme-dark .considerations-list li {
+  color: #e5e7eb;
+}
+
+.guide-card.theme-dark .tech-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.guide-card.theme-dark .guide-protip-box {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left-color: var(--color-red, #e5232e);
+}
+
+.guide-card.theme-dark .protip-text {
+  color: #d1d5db;
+}
+
+.guide-card.theme-dark .preview-label {
+  color: #9ca3af;
+}
+
+.guide-card.theme-dark .product-pill-btn {
+  background-color: #1c1c1c;
+  border-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.guide-card.theme-dark .product-pill-btn:hover {
+  background-color: #262626;
+  border-color: var(--color-red, #e5232e);
+}
+
+.guide-card.theme-dark .pill-name {
+  color: #f3f4f6;
+}
+
+.guide-card.theme-dark .pill-price {
+  color: #ef4444;
+}
+
+/* Image Box */
+.guide-image-box {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #dedede;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.guide-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.guide-card:hover .guide-img {
+  transform: scale(1.03);
+}
+
+.guide-image-overlay-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(17, 17, 17, 0.88);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+}
+
+.guide-card:hover .guide-image-overlay-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.guide-image-overlay-btn:hover {
+  background-color: var(--color-red, #e5232e);
+  border-color: var(--color-red, #e5232e);
+}
+
+/* Content Box */
+.guide-content-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Number Tag: e.g. 01 —— */
+.guide-number-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.25rem;
+}
+
+.number-digits {
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-red, #e5232e);
+}
+
+.number-line {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-red, #e5232e);
+}
+
+.guide-section-title {
+  margin: 0.2rem 0 0.75rem 0;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #111111;
+  line-height: 1.1;
+}
+
+.guide-section-desc {
+  margin: 0 0 1.25rem 0;
+  font-family: var(--font-main, sans-serif);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: #374151;
+  max-width: 48ch;
+}
+
+/* Considerations */
+.guide-considerations {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.considerations-tag {
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-red, #e5232e);
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.considerations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.considerations-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #222222;
+}
+
+.considerations-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-red, #e5232e);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Tech Tags */
+.guide-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.22rem 0.6rem;
+  background-color: #ebe7de;
+  border: 1px solid #ddd7ca;
+  border-radius: 3px;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #4b5563;
+}
+
+/* RideLab Pro Tip */
+.guide-protip-box {
+  background-color: #f0ece1;
+  border-left: 3px solid var(--color-red, #e5232e);
+  padding: 0.75rem 1rem;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 1.25rem;
+}
+
+.protip-label {
+  display: block;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-red, #e5232e);
+  margin-bottom: 0.25rem;
+}
+
+.protip-text {
+  margin: 0;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #374151;
+  font-style: italic;
+}
+
+/* Sample Products preview pills */
+.guide-products-preview {
+  margin-bottom: 1.5rem;
+}
+
+.preview-label {
+  display: block;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.preview-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.product-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ded9cd;
+  border-radius: 4px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product-pill-btn:hover {
+  border-color: var(--color-red, #e5232e);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pill-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.pill-name {
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.pill-price {
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-red, #e5232e);
+}
+
+/* Actions Row: Catalog CTA */
+.guide-actions-row {
+  display: flex;
+  align-items: center;
+}
+
+.guide-catalog-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.75rem 1.35rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.guide-card.theme-dark .guide-catalog-cta-btn {
+  background-color: var(--color-red, #e5232e);
+}
+
+.guide-catalog-cta-btn:hover {
+  background-color: var(--color-red, #e5232e);
+  transform: translateX(3px);
+  box-shadow: 0 6px 16px rgba(229, 35, 46, 0.35);
+}
+
+.guide-card.theme-dark .guide-catalog-cta-btn:hover {
+  background-color: var(--color-red-hover, #c91b25);
+}
+
+.guide-catalog-cta-btn .cta-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.guide-catalog-cta-btn:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Disclaimer Box */
+.guide-disclaimer-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background-color: #ebe7de;
+  border: 1px solid #ded9cd;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+}
+
+.disclaimer-icon {
+  font-size: 1.25rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.disclaimer-text {
+  margin: 0;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* Bottom CTA Banner */
+.guide-bottom-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2.75rem;
+  border-top: 1px solid #e5e2da;
+}
+
+.banner-question {
+  margin: 0;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #0e0e0e;
+}
+
+.banner-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: var(--color-red, #e5232e);
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  padding: 0.95rem 1.85rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.banner-explore-btn:hover {
+  background-color: var(--color-red-hover, #c91b25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 35, 46, 0.4);
+}
+
+.banner-explore-btn .arrow {
+  font-size: 1.15rem;
+  transition: transform 0.2s ease;
+}
+
+.banner-explore-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .guide-card,
+  .guide-card.layout-right {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guide-card.layout-right .guide-image-box {
+    order: 1;
+  }
+
+  .guide-card.layout-right .guide-content-box {
+    order: 2;
+  }
+
+  .guide-card.theme-dark {
+    padding: 2rem 1.5rem;
+  }
+
+  .guide-bottom-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .banner-explore-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

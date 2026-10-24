@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 580px;
+  padding-block: 5.5rem;
+
+  background-color: #1a1a1a;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.6) 42%,
+      rgba(0, 0, 0, 0.2) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/images/hero-img.png");
+
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-display, "Montserrat", sans-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  max-width: 42ch;
+  margin-block: 1.25rem 2rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #e5e5e5;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  min-height: 48px;
+  padding: 0.85rem 1.6rem;
+
+  background-color: var(--color-red, #e5232e);
+  color: #ffffff;
+  font-family: var(--font-main, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--color-red-hover, #c91b25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 35, 46, 0.4);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+.primary-button span[aria-hidden="true"] {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.primary-button:hover span[aria-hidden="true"] {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 480px;
+    padding-block: 4rem 3.5rem;
+    background-position: 70% center;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.35) 100%
+      ),
+      url("/images/hero-img.png");
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
